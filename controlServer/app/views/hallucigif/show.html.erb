@@ -1,0 +1,9 @@
+<h1>Hallucigif</h1>
+<% if flash[:message] %>
+<p><%=flash[:message] %></p>
+<% end %>
+<%= form_tag("/submit", method: "get") do %>
+  <%= label_tag(:link, "Youtube URL") %>
+  <%= text_field_tag(:link) %>
+  <%= submit_tag("Submit") %>
+<% end %>
