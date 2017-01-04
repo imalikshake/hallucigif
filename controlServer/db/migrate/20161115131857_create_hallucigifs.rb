@@ -1,4 +1,4 @@
-class CreateHallucigifsTable < ActiveRecord::Migration
+class CreateHallucigifs < ActiveRecord::Migration
   def change
     create_table :hallucigifs do |t|
       t.string :link

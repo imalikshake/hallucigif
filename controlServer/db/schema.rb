@@ -11,14 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161115132217) do
-
-  create_table "hallucigifs", force: :cascade do |t|
-    t.string  "link"
-    t.integer "from"
-    t.integer "to"
-    t.integer "status"
-  end
+ActiveRecord::Schema.define(version: 20161115131857) do
 
   create_table "hallucigifs", force: :cascade do |t|
     t.string  "link"
