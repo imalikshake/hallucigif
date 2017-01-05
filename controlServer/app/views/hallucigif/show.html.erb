@@ -5,5 +5,13 @@
 <%= form_tag("/submit", method: "get") do %>
   <%= label_tag(:link, "Youtube URL") %>
   <%= text_field_tag(:link) %>
+ 
+
+  <%= label_tag(:video_start, "Start Time") %>
+
+  <%= time_select :video_start, :from_time, discard_hour: true, include_seconds: true, :default => {:minute => '00', :second => '00'} %>
+
+  <%= label_tag(:duration, "Duration") %>
+  <%= select(:duration, :duration_id, [['1', 1], ['2', 2],['3', 3],['4', 4],['5', 5]]) %>
   <%= submit_tag("Submit") %>
 <% end %>

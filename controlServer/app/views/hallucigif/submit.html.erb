@@ -1,2 +1,30 @@
-<%=@ytlink%>
-<p>Hi</p>
+<h1>Hallucigif</h1>
+<h5>Job URL:</h5> <p> <%=@ytlink%> </p> 
+<h5>Start Time:</h5>  <p> <%=@time%> </p> 
+<h5>Duration:</h5>  <p>  <%=@gif_duration%> </p> 
+
+
+<div class="render">
+  <%= link_to 'Render GIF', render_gif_path, remote: true, class: 'btn btn-primary btn-lg' %>
+  <div class="well">
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="progress-status text-primary">
+          0/0
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="progress progress-striped active">
+          <div class="progress-bar">
+            <div class="text-primary">
+              0%
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <%= link_to 'View GIF', '/system/export.csv', class: 'btn btn-success render-link', style: 'display:none' %>
+</div>

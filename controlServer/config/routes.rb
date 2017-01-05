@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   get '/' => 'hallucigif#show'
   get '/submit' => 'hallucigif#submit'
-  
+  get 'render_gif' => 'hallucigif#render_gif', as: :render_gif
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
