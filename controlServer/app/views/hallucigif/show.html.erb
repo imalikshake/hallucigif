@@ -4,7 +4,9 @@
 <% end %>
 <%= form_tag("/submit", method: "get") do %>
   <%= label_tag(:link, "Youtube URL:") %>
-  <%= text_field_tag(:link, placeholder: 'Enter search term') %>
+
+  <%= text_field_tag(:link, nil, placeholder: "Enter URL...", :size=> 50) %>
+
   <br/>
   <%= label_tag(:video_start, "Start Time:") %>
   <%= time_select :video_start, :from_time, discard_hour: true, include_seconds: true, :default => {:minute => '00', :second => '00'} %>
